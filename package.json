@@ -1,0 +1,14 @@
+{
+  "name": "me",
+  "version": "0.0.1",
+  "description": "Personal WebSite",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "jhsilva",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
