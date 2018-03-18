@@ -16,6 +16,7 @@ module.exports = {
       "ref"  : "origin/master",
       "repo" : "git@github.com:jhsilva/me.git",
       "path" : "/var/www/me",
+      "ssh_options": ["StrictHostKeyChecking=no", "PasswordAuthentication=no"],
       "post-deploy" : "npm install; npm start"
     }
   }
