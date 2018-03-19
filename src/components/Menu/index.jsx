@@ -1,10 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import MenuItem from 'components/MenuItem';
 
-const Menu = () => <nav />;
+const Menu = ({ links }) => (
+  <nav>{links.map(link => <MenuItem {...link} />)}</nav>
+);
 
-Menu.propTypes = {};
+Menu.propTypes = {
+  links: PropTypes.arrayOf(PropTypes.obj),
+};
 
-Menu.defaultProps = {};
+Menu.defaultProps = {
+  links: [],
+};
 
 export default Menu;
