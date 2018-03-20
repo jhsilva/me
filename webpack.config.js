@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const pkg = require('./package.json');
 
 module.exports = {
@@ -87,6 +88,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new CleanWebpackPlugin(path.resolve(__dirname, 'dist')),
     new HtmlWebPackPlugin({
       template: './src/index.html',
     }),
